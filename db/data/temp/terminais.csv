@@ -1,0 +1,120 @@
+Ferrovia;Ano;Pátio de Referência;Terminal;Mercadoria;Capacidade_Vg/dia;Capacidade_TU/dia;Nº Horas Func. Dia;Tempo Médio de Carga_Vg/h;Tempo Médio de Carga_TU/h;Tempo Médio de Descarga_Vg/h;Tempo Médio de Descarga_TU/h
+MRS;2025.0;Água Branca (IAB, MRS);IDL;Contêiner Cheio/Vazio;20.0;1320.0;9.0;2.2;146.7;2.2;146.7
+MRS;2025.0;Água Branca (IAB, MRS);IDL;Areia;17.0;1020.0;9.0;1.9;113.3;1.9;113.3
+MRS;2025.0;Água Branca (IAB, MRS);IDL;Cimento acondicionado;4.0;280.0;9.0;0.4;31.1;0.4;31.1
+MRS;2025.0;Arará (FAR, MRS);FAY;Cimento acondicionado;20.0;1340.0;24.0;0.8;55.8;0.8;55.8
+MRS;2025.0;Arará (FAR, MRS);FCU;Cimento acondicionado;20.0;1340.0;24.0;0.8;55.8;0.8;55.8
+MRS;2025.0;Arará (FAR, MRS);FDJ;Prd.Siderúrgicos - Outros;10.0;630.0;24.0;0.4;26.3;0.4;26.3
+MRS;2025.0;Arará (FAR, MRS);FDJ;Ferro Gusa;70.0;4690.0;24.0;2.9;195.4;2.9;195.4
+MRS;2025.0;Arará (FAR, MRS);FLG;Contêiner Cheio/Vazio;32.0;2144.0;24.0;1.3;89.3;1.3;89.3
+MRS;2025.0;Arará (FAR, MRS);FLG;Prd.Siderúrgicos - Outros;30.0;1890.0;24.0;1.3;78.8;1.3;78.8
+MRS;2025.0;Arará (FAR, MRS);FLG;Cimento acondicionado;20.0;1340.0;24.0;0.8;55.8;0.8;55.8
+MRS;2025.0;Arará (FAR, MRS);FLI;Contêiner Cheio/Vazio;25.0;1675.0;24.0;1.0;69.8;1.0;69.8
+MRS;2025.0;Arará (FAR, MRS);FMW;Prd.Siderúrgicos - Outros;32.0;2016.0;24.0;1.3;84.0;1.3;84.0
+MRS;2025.0;Arará (FAR, MRS);FMW;Contêiner Cheio/Vazio;32.0;2144.0;24.0;1.3;89.3;1.3;89.3
+MRS;2025.0;Arará (FAR, MRS);FPP;Zinco;21.0;1470.0;24.0;0.9;61.3;0.9;61.3
+MRS;2025.0;Baia Sepetiba (FXS, MRS);FSV;Minério de Ferro;899.0;53570.0;24.0;37.5;2232.1;37.5;2232.1
+MRS;2025.0;Barão de Angra (FBN, MRS);FAX;Bauxita;70.0;5180.0;10.0;7.0;518.0;7.0;518.0
+MRS;2025.0;Barão de Juparana (FBJ, MRS);FGX;Prd.Siderúrgicos - Outros;10.0;700.0;10.0;1.0;70.0;1.0;70.0
+MRS;2025.0;Barbará (FBB, MRS);FKK;Prd.Siderúrgicos - Outros;26.0;1716.0;24.0;1.1;71.5;1.1;71.5
+MRS;2025.0;Barbará (FBB, MRS);FKK;Sucata;10.0;500.0;24.0;0.4;20.8;0.4;20.8
+MRS;2025.0;Barnabé (IBA, MRS);IEM;Contêiner Cheio/Vazio;25.0;1650.0;24.0;1.0;68.8;1.0;68.8
+MRS;2025.0;Barnabé (IBA, MRS);IEM;Celulose;42.0;2772.0;24.0;1.8;115.5;1.8;115.5
+MRS;2025.0;Barreiro (FBO, MRS);FNN;Prd.Siderúrgicos - Outros;14.0;812.0;24.0;0.6;33.8;0.6;33.8
+MRS;2025.0;Barreiro (FBO, MRS);FNN;Sucata;5.0;250.0;24.0;0.2;10.4;0.2;10.4
+MRS;2025.0;Benfica (FBF, MRS);FBT;Cimento acondicionado;5.0;430.0;24.0;0.2;17.9;0.2;17.9
+MRS;2025.0;Brisamar (FBA, MRS);FUG;Prd.Siderúrgicos - Outros;50.0;2850.0;24.0;2.1;118.8;2.1;118.8
+MRS;2025.0;Brisamar (FBA, MRS);FUR;Contêiner Cheio/Vazio;34.0;1938.0;24.0;1.4;80.8;1.4;80.8
+MRS;2025.0;Caçapava (FCA, MRS);FAE;Prd.Siderúrgicos - Outros;13.0;884.0;24.0;0.5;36.8;0.5;36.8
+MRS;2025.0;Caçapava (FCA, MRS);FES;Prd.Siderúrgicos - Outros;13.0;884.0;24.0;0.5;36.8;0.5;36.8
+MRS;2025.0;Capuava (ICP, MRS);ICC;Cimento acondicionado;8.0;568.0;24.0;0.3;23.7;0.3;23.7
+MRS;2025.0;Carlos Newlands (FSN, MRS);FSX;Minério de Ferro;544.0;47124.0;24.0;22.7;1963.5;22.7;1963.5
+MRS;2025.0;Cel. João Carlos Guedes (FJC, MRS);FVJ;Prd.Siderúrgicos - Outros;42.0;3486.0;24.0;1.8;145.3;1.8;145.3
+MRS;2025.0;Cel. João Carlos Guedes (FJC, MRS);FVJ;Minério de Ferro;136.0;9520.0;24.0;5.7;396.7;5.7;396.7
+MRS;2025.0;Cel. João Carlos Guedes (FJC, MRS);FVJ;Sucata;4.0;232.0;24.0;0.2;9.7;0.2;9.7
+MRS;2025.0;Conceiçãozinha (ICZ, MRS);ICN;Contêiner Cheio/Vazio;26.0;2236.0;24.0;1.1;93.2;1.1;93.2
+MRS;2025.0;Conceiçãozinha (ICZ, MRS);IFR;Soja;110.0;8690.0;24.0;4.6;362.1;4.6;362.1
+MRS;2025.0;Conceiçãozinha (ICZ, MRS);IFZ;Enxofre;21.0;1281.0;24.0;0.9;53.4;0.9;53.4
+MRS;2025.0;Cruzeiro (FCZ, MRS);FMX;Prd.Siderúrgicos - Outros;8.0;520.0;16.0;0.5;32.5;0.5;32.5
+MRS;2025.0;Cruzeiro (FCZ, MRS);FON;Areia;21.0;1365.0;10.0;2.1;136.5;2.1;136.5
+MRS;2025.0;Curuputuba (FCT, MRS);FNB;Prd.Siderúrgicos - Outros;20.0;1007.0;16.0;1.3;62.9;1.3;62.9
+MRS;2025.0;Curuputuba (FCT, MRS);FNO;Contêiner Cheio/Vazio;25.0;5777.0;24.0;1.0;240.7;1.0;240.7
+MRS;2025.0;Curuputuba (FCT, MRS);FOF;Coque;35.0;9128.0;10.0;3.5;912.8;3.5;912.8
+MRS;2025.0;Dias Tavares (FDT, MRS);FMJ;Prd.Siderúrgicos - Outros;36.0;2232.0;23.0;1.6;97.0;1.6;97.0
+MRS;2025.0;Dias Tavares (FDT, MRS);FMJ;Sucata;20.0;1600.0;23.0;0.9;69.6;0.9;69.6
+MRS;2025.0;Dias Tavares (FDT, MRS);FMJ;Minério de Ferro;33.0;3043.0;24.0;1.4;126.8;1.4;126.8
+MRS;2025.0;Dias Tavares (FDT, MRS);FTF;Contêiner Cheio/Vazio;20.0;1200.0;9.0;2.2;133.3;2.2;133.3
+MRS;2025.0;Dr. Joaquim Murtinho (FDM, MRS);FJB;Minério de Ferro;276.0;15667.0;24.0;11.5;652.8;11.5;652.8
+MRS;2025.0;Dr. Joaquim Murtinho (FDM, MRS);FJB;Magnetita;10.0;870.0;16.0;0.6;54.4;0.6;54.4
+MRS;2025.0;Edmar Alves (FEA, MRS);FDG;Contêiner Cheio/Vazio;45.0;2070.0;19.0;2.4;108.9;2.4;108.9
+MRS;2025.0;Eng. Cesar de Souza (FCE, MRS);FAH;Prd.Siderúrgicos - Outros;10.0;650.0;9.0;1.1;72.2;1.1;72.2
+MRS;2025.0;Eng. Neiva (FEN, MRS);FKC;Contêiner Cheio/Vazio;45.0;180.0;10.0;4.5;18.0;4.5;18.0
+MRS;2025.0;Eng. São Paulo (IES, MRS);IMY;Cimento acondicionado;5.0;350.0;9.0;0.6;38.9;0.6;38.9
+MRS;2025.0;Estação TUF (IUF, MRS);ITL;Açúcar;84.0;7610.0;24.0;3.5;317.1;3.5;317.1
+MRS;2025.0;Final Ramal das Fábricas (IFA, MRS);ICK;Contêiner Cheio/Vazio;20.0;1740.0;24.0;0.8;72.5;0.8;72.5
+MRS;2025.0;Floriano (FFL, MRS);FTY;Prd.Siderúrgicos - Outros;20.0;1260.0;15.0;1.3;84.0;1.3;84.0
+MRS;2025.0;Floriano (FFL, MRS);FTY;Contêiner Cheio/Vazio;22.0;1474.0;15.0;1.5;98.3;1.5;98.3
+MRS;2025.0;Guaiba (FGI, MRS);FGB;Minério de Ferro;1474.0;157728.0;24.0;61.4;6572.0;61.4;6572.0
+MRS;2025.0;Horto Florestal (EHF, FCA);-;Prd.Siderúrgicos - Outros;32.0;2240.0;24.0;1.3;93.3;1.3;93.3
+MRS;2025.0;Ipiranga (IIP, MRS);ITG;Prd.Siderúrgicos - Outros;20.0;1360.0;9.0;2.2;151.1;2.2;151.1
+MRS;2025.0;Itutinga (FGT, MRS);FGQ;Minério de Ferro;136.0;3600.0;24.0;5.7;150.0;5.7;150.0
+MRS;2025.0;Itutinga (FGT, MRS);FGQ;Calcário;25.0;2050.0;13.0;1.9;157.7;1.9;157.7
+MRS;2025.0;Itutinga (FGT, MRS);FGQ;Prd.Siderúrgicos - Outros;20.0;1400.0;9.0;2.2;155.6;2.2;155.6
+MRS;2025.0;Itutinga (FGT, MRS);FGQ;Coque;25.0;2050.0;13.0;1.9;157.7;1.9;157.7
+MRS;2025.0;Itutinga (FGT, MRS);FGQ;Contêiner Cheio/Vazio;20.0;1320.0;9.0;2.2;146.7;2.2;146.7
+MRS;2025.0;Jundiaí (ZJY, RMP);ITI;Contêiner Cheio/Vazio;21.0;1428.0;16.0;1.3;89.3;1.3;89.3
+MRS;2025.0;Manoel Feio (IEF, MRS);IMU;Prd.Siderúrgicos - Outros;32.0;1984.0;16.0;2.0;124.0;2.0;124.0
+MRS;2025.0;Manoel Feio (IEF, MRS);IMU;Sucata;10.0;730.0;16.0;0.6;45.6;0.6;45.6
+MRS;2025.0;Manoel Feio (IEF, MRS);IMV;Contêiner Cheio/Vazio;25.0;1550.0;13.0;1.9;119.2;1.9;119.2
+MRS;2025.0;Manoel Feio (IEF, MRS);IUS;Prd.Siderúrgicos - Outros;20.0;1240.0;16.0;1.3;77.5;1.3;77.5
+MRS;2025.0;Mogi das Cruzes (OMC, MRS);OAL;Prd.Siderúrgicos - Outros;8.0;520.0;16.0;0.5;32.5;0.5;32.5
+MRS;2025.0;Mogi das Cruzes (OMC, MRS);OAL;Cimento acondicionado;2.0;52.0;16.0;0.1;3.3;0.1;3.3
+MRS;2025.0;Mooca (IMO, MRS);IAK;Areia;21.0;1407.0;10.0;2.1;140.7;2.1;140.7
+MRS;2025.0;Mooca (IMO, MRS);IPF;Areia;17.0;1139.0;10.0;1.7;113.9;1.7;113.9
+MRS;2025.0;Olhos D Água (FLH, MRS);FTL;Minério de Ferro;494.0;48276.0;24.0;20.6;2011.5;20.6;2011.5
+MRS;2025.0;Otavio Dapieve (FOO, MRS);FDI;Minério de Ferro;1224.0;140876.0;24.0;51.0;5869.8;51.0;5869.8
+MRS;2025.0;Ouro Fino (IOF, MRS);IGE;Contêiner Cheio/Vazio;25.0;2236.0;15.0;1.7;149.1;1.7;149.1
+MRS;2025.0;Pedra do Sino (FPE, MRS);FTU;Cimento acondicionado;12.0;852.0;17.0;0.7;50.1;0.7;50.1
+MRS;2025.0;Pedra do Sino (FPE, MRS);FTU;Cimento a Granel;27.0;2052.0;9.0;3.0;228.0;3.0;228.0
+MRS;2025.0;Piaçaguera (IPG, MRS);ICO;Cimento acondicionado;63.0;3969.0;24.0;2.6;165.4;2.6;165.4
+MRS;2025.0;Piaçaguera (IPG, MRS);ICO;Prd.Siderúrgicos - Outros;63.0;3969.0;24.0;2.6;165.4;2.6;165.4
+MRS;2025.0;Pinheirinho (FPI, MRS);FJS;Prd.Siderúrgicos - Outros;7.0;497.0;16.0;0.4;31.1;0.4;31.1
+MRS;2025.0;Porto Sudeste (FOP, MRS);FOX;Minério de Ferro;824.0;50961.0;24.0;34.3;2123.4;34.3;2123.4
+MRS;2025.0;Porto Sudeste (FOP, MRS);FXO;Carvão;80.0;3440.0;24.0;3.3;143.3;3.3;143.3
+MRS;2025.0;Pulverizacao (FPU, MRS);FPW;Prd.Siderúrgicos - Outros;5.0;365.0;9.0;0.6;40.6;0.6;40.6
+MRS;2025.0;Santo André (ISA, MRS);IAS;Cimento a Granel;30.0;1860.0;24.0;1.3;77.5;1.3;77.5
+MRS;2025.0;Santo André (ISA, MRS);IBS;Areia;10.0;670.0;10.0;1.0;67.0;1.0;67.0
+MRS;2025.0;Santos (ISN, MRS);ADM;Grãos - Milho;96.0;7680.0;24.0;4.0;320.0;4.0;320.0
+MRS;2025.0;Santos (ISN, MRS);ICE;Açúcar;80.0;6720.0;24.0;3.3;280.0;3.3;280.0
+MRS;2025.0;Santos (ISN, MRS);ICH;Açúcar;160.0;13440.0;24.0;6.7;560.0;6.7;560.0
+MRS;2025.0;Santos (ISN, MRS);ICJ;Soja;190.0;14630.0;24.0;7.9;609.6;7.9;609.6
+MRS;2025.0;Santos (ISN, MRS);ICJ;Grãos - Milho;96.0;7680.0;24.0;4.0;320.0;4.0;320.0
+MRS;2025.0;Santos (ISN, MRS);ICV;Contêiner Cheio/Vazio;26.0;2158.0;24.0;1.1;89.9;1.1;89.9
+MRS;2025.0;Santos (ISN, MRS);IGC;Grãos - Milho;96.0;7680.0;24.0;4.0;320.0;4.0;320.0
+MRS;2025.0;Santos (ISN, MRS);ISB;Celulose;90.0;6480.0;24.0;3.8;270.0;3.8;270.0
+MRS;2025.0;Santos (ISN, MRS);ITD;Contêiner Cheio/Vazio;26.0;2158.0;24.0;1.1;89.9;1.1;89.9
+MRS;2025.0;São Bento (FST, MRS);FTS;Areia;25.0;2070.0;9.0;2.8;230.0;2.8;230.0
+MRS;2025.0;São Bento (FST, MRS);FTS;Prd.Siderúrgicos - Outros;25.0;1675.0;22.0;1.1;76.1;1.1;76.1
+MRS;2025.0;São Bento (FST, MRS);FTS;Ferro Gusa;18.0;1494.0;9.0;2.0;166.0;2.0;166.0
+MRS;2025.0;São Bento (FST, MRS);FUP;Cimento a Granel;25.0;1900.0;16.0;1.6;118.8;1.6;118.8
+MRS;2025.0;São Bento (FST, MRS);FUP;Escória;25.0;1875.0;16.0;1.6;117.2;1.6;117.2
+MRS;2025.0;São Caetano do Sul (ISC, MRS);IFB;Prd.Siderúrgicos - Outros;9.0;486.0;10.0;0.9;48.6;0.9;48.6
+MRS;2025.0;São Caetano do Sul (ISC, MRS);IPO;Prd.Siderúrgicos - Outros;9.0;486.0;10.0;0.9;48.6;0.9;48.6
+MRS;2025.0;São José dos Campos (FSJ, MRS);FHY;Cimento acondicionado;11.0;880.0;16.0;0.7;55.0;0.7;55.0
+MRS;2025.0;Saudade (FSE, MRS);FTB;Prd.Siderúrgicos - Outros;15.0;1020.0;3.0;5.0;340.0;5.0;340.0
+MRS;2025.0;Siderúrgica do Atlântico (HSG, MRS);FXB;Escória;11.0;605.0;24.0;0.5;25.2;0.5;25.2
+MRS;2025.0;Siderúrgica do Atlântico (HSG, MRS);FXC;Prd.Siderúrgicos - Outros;63.0;4788.0;24.0;2.6;199.5;2.6;199.5
+MRS;2025.0;Siderúrgica do Atlântico (HSG, MRS);FXC;Coque;11.0;605.0;24.0;0.5;25.2;0.5;25.2
+MRS;2025.0;Siderúrgica do Atlântico (HSG, MRS);FXM;Minério de Ferro;290.0;23120.0;24.0;12.1;963.3;12.1;963.3
+MRS;2025.0;Suzano Novo (ISU, MRS);ILB;Minério de Ferro;90.0;8550.0;24.0;3.8;356.3;3.8;356.3
+MRS;2025.0;Suzano Novo (ISU, MRS);ILB;Magnetita;26.0;2054.0;10.0;2.6;205.4;2.6;205.4
+MRS;2025.0;Suzano Novo (ISU, MRS);ILB;Contêiner Cheio/Vazio;26.0;2158.0;10.0;2.6;215.8;2.6;215.8
+MRS;2025.0;Terminal Paraibuna de Metais (FPM, MRS);FDW;Zinco;10.0;940.0;24.0;0.4;39.2;0.4;39.2
+MRS;2025.0;Utinga (IUT, MRS);ICS;Prd.Siderúrgicos - Outros;15.0;975.0;16.0;0.9;60.9;0.9;60.9
+MRS;2025.0;Várzea Paulista (OVP, MRS);IEK;Enxofre;18.0;990.0;10.0;1.8;99.0;1.8;99.0
+MRS;2025.0;Volta Redonda (FVR, MRS);FDA;Prd.Siderúrgicos - Outros;50.0;3350.0;24.0;2.1;139.6;2.1;139.6
+MRS;2025.0;Volta Redonda (FVR, MRS);FDA;Calcário;21.0;1428.0;24.0;0.9;59.5;0.9;59.5
+MRS;2025.0;Volta Redonda (FVR, MRS);FNL;Cimento acondicionado;30.0;2370.0;24.0;1.3;98.8;1.3;98.8
+MRS;2025.0;Volta Redonda (FVR, MRS);FNL;Carvão;158.0;7762.0;24.0;6.6;323.4;6.6;323.4
+MRS;2025.0;Volta Redonda (FVR, MRS);FNL;Coque;21.0;1200.0;24.0;0.9;50.0;0.9;50.0
+MRS;2025.0;Volta Redonda (FVR, MRS);FNL;Minério de Ferro;503.0;26431.0;24.0;21.0;1101.3;21.0;1101.3
