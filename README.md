@@ -1,5 +1,8 @@
 # 🚆 Dashboard ANTT - Declaração de Rede Ferroviária
 
+Acesse o dashboard:
+[Deployed application ](https://antt-data-analysis.streamlit.app/)
+
 > **Desafio Técnico**: Engenharia de Dados e Visualização Interativa com Python
 
 Um dashboard bilíngue (PT/EN) para análise da infraestrutura ferroviária brasileira, desenvolvido como parte de um desafio técnico que avalia habilidades em ETL, modelagem de dados e desenvolvimento de painéis interativos.
@@ -184,6 +187,10 @@ Este é um projeto de portfólio pessoal desenvolvido como desafio técnico. Sug
 # 🇺🇸 English Version
 
 # 🚆 ANTT Dashboard - Railway Network Declaration
+
+Access the dashboard
+[Deployed application ](https://antt-data-analysis.streamlit.app/)
+
 
 > **Technical Challenge**: Data Engineering and Interactive Visualization with Python
 
