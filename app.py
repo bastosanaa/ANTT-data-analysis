@@ -38,7 +38,8 @@ analise = st.sidebar.radio(
     "Selecione o Indicador:",
     [
         "1. Licenciamento de pátios por situação operacional", 
-        "2. Capacidade de Terminais por Mercadoria"
+        "2. Capacidade de Terminais por Mercadoria",
+        "3. Relação Carga x Velocidade"
     ]
 )
 
@@ -291,3 +292,210 @@ elif analise == "2. Capacidade de Terminais por Mercadoria":
             )
 
             st.plotly_chart(fig_bar, use_container_width=True)
+
+# ... (dentro do elif analise == "4. ...")
+
+elif analise == "3. Relação Carga x Velocidade":
+
+    # ==============================================================================
+    # 1. ANÁLISE DE ENGENHARIA (TEORIA)
+    # Relação Física: Peso x Velocidade de Projeto (Usa TODOS os dados válidos)
+    # ==============================================================================
+
+    st.subheader("Relação Carga vs. Velocidade")
+
+    st.markdown("""
+    Esta análise demonstra o trade-off físico do projeto da via. 
+    * **Nota:** Considera todos os trechos cadastrados para traçar o perfil da engenharia, independente de anomalias operacionais.
+    """
+    )
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Carga vs. Velocidade Autorizada (VMA)")
+        # Query 1: Agregada (SEM filtro de limpeza VMC, pois olhamos apenas VMA)
+        query_eng = """
+            SELECT 
+                carga_max_por_eixo_carga_t as carga_eixo,
+                AVG(vma_trem_carregado_vma_km_h) as vma_media
+            FROM trechos_fisicos
+            WHERE carga_max_por_eixo_carga_t > 0 
+            AND vma_trem_carregado_vma_km_h > 0
+            GROUP BY carga_max_por_eixo_carga_t
+            ORDER BY carga_max_por_eixo_carga_t
+        """
+        
+        df_eng = load_data(query_eng)
+        
+        if not df_eng.empty:
+            fig_eng = px.line(
+                df_eng,
+                x='carga_eixo',
+                y='vma_media',
+                markers=True,
+                labels={'carga_eixo': 'Carga Máxima (ton/eixo)', 'vma_media': 'VMA Média (km/h)'}
+            )
+            fig_eng.update_traces(fill='tozeroy', line_color='#2E86C1')
+            fig_eng.update_xaxes(type='category')
+            st.plotly_chart(fig_eng, use_container_width=True)
+            
+            if len(df_eng) > 1:
+                vma_leve = df_eng.iloc[0]['vma_media']
+                vma_pesada = df_eng.iloc[-1]['vma_media']
+                diff = vma_leve - vma_pesada
+                st.info(f"💡 **Insight:** Aumentar a carga ao limite máximo reduz a velocidade autorizada em aproximadamente **{diff:.1f} km/h** na média.")
+
+    with col2:
+        st.subheader("Carga vs. Velocidade Comercial (VMC)")
+        query_eng = """
+            SELECT 
+                carga_max_por_eixo_carga_t as carga_eixo,
+                AVG(vmc_trem_carregado_vmc_km_h) as vmc_media
+            FROM trechos_fisicos
+            WHERE carga_max_por_eixo_carga_t > 0 
+            AND vmc_trem_carregado_vmc_km_h > 0
+            GROUP BY carga_max_por_eixo_carga_t
+            ORDER BY carga_max_por_eixo_carga_t
+        """
+        
+        df_eng = load_data(query_eng)
+        
+        if not df_eng.empty:
+            fig_eng = px.line(
+                df_eng,
+                x='carga_eixo',
+                y='vmc_media',
+                markers=True,
+                labels={'carga_eixo': 'Carga Máxima (ton/eixo)', 'vmc_media': 'VMC Média (km/h)'}
+            )
+            fig_eng.update_traces(fill='tozeroy', line_color='#2E86C1')
+            fig_eng.update_xaxes(type='category')
+            st.plotly_chart(fig_eng, use_container_width=True)
+            
+            if len(df_eng) > 1:
+                vmc_pesada = df_eng.iloc[0]['vmc_media']
+                vmc_leve = df_eng.iloc[-1]['vmc_media']
+                diff = vmc_leve - vmc_pesada
+                st.info(f"💡 **Insight:** Cargas mais pesadas alcançam maiores velocidades médias, superando as cargas mais leves em **{diff:.1f} km/h** neste conjunto de dados.")    
+            
+    st.divider()
+
+
+    # ==============================================================================
+    # 2. AUDITORIA E LIMPEZA DE DADOS 
+    # Identifica onde VMC > VMA
+    # ==============================================================================
+    st.subheader("Auditoria de Consistência Operacional")
+    
+    QUERY_ANOMALIES = """
+        SELECT 
+            linha,
+            vma_trem_carregado_vma_km_h as vma,
+            vmc_trem_carregado_vmc_km_h as vmc
+        FROM trechos_fisicos
+        WHERE vmc_trem_carregado_vmc_km_h > vma_trem_carregado_vma_km_h
+    """
+    df_anomalies = load_data(QUERY_ANOMALIES)
+    qtd_anomalies = len(df_anomalies)
+    
+    if qtd_anomalies > 0:
+        st.error(
+            f"🚨 **Inconsistência Detectada:** Foram encontrados **{qtd_anomalies} trechos** onde a Velocidade Real (VMC) "
+            f"supera a Velocidade Autorizada (VMA). Estes dados indicam erro de cadastro e serão **removidos** da análise de eficiência abaixo."
+        )
+        
+        with st.expander(f"Ver lista de {qtd_anomalies} trechos inconsistentes"):
+            df_view = df_anomalies.copy()
+            df_view['Excesso (%)'] = ((df_view['vmc'] / df_view['vma']) - 1) * 100
+            st.dataframe(
+                df_view.style.format({'vma': '{:.1f}', 'vmc': '{:.1f}', 'Excesso (%)': '+{:.1f}%'})
+                       .background_gradient(subset=['Excesso (%)'], cmap='Reds'),
+                use_container_width=True
+            )
+    else:
+        st.success("✅ Auditoria Aprovada: Nenhum trecho com VMC > VMA encontrado. Dados consistentes.")
+
+    st.divider()
+
+    # ==============================================================================
+    # 3. ANÁLISE OPERACIONAL (DADOS LIMPOS)
+    # Eficiência Real: VMA vs VMC (Apenas dados válidos)
+    # ==============================================================================
+    st.subheader("Eficiência Operacional")
+    st.markdown("Comparação entre o limite da via e a realidade da operação, **excluindo** as anomalias listadas acima.")
+
+    # Query 2: Dados Limpos (WHERE vma >= vmc)
+    QUERY_CLEAN = """
+        SELECT 
+            linha,
+            vma_trem_carregado_vma_km_h as vma,
+            vmc_trem_carregado_vmc_km_h as vmc
+        FROM trechos_fisicos
+        WHERE vma_trem_carregado_vma_km_h > 0 
+          AND vmc_trem_carregado_vmc_km_h > 0
+          AND vma_trem_carregado_vma_km_h >= vmc_trem_carregado_vmc_km_h
+    """
+    df_clean = load_data(QUERY_CLEAN)
+
+    if not df_clean.empty:
+        df_clean['eficiencia'] = (df_clean['vmc'] / df_clean['vma']) * 100
+
+        def classify(pct):
+            if pct >= 80:
+                return "Alta Eficiência (80-100%)"
+            elif pct >= 50:
+                return "Atenção (50-80%)"
+            else: return "Gargalo Crítico (<50%)"
+
+        df_clean['status'] = df_clean['eficiencia'].apply(classify)
+
+        col_graf, col_kpi = st.columns([3, 1])
+
+        with col_graf:
+            fig_scatter = px.scatter(
+                df_clean, x='vma', y='vmc', color='status',
+                color_discrete_map={
+                    "Alta Eficiência (80-100%)": "#27AE60",
+                    "Atenção (50-80%)": "#F1C40F",
+                    "Gargalo Crítico (<50%)": "#E74C3C"
+                },
+                title="Dispersão VMA x VMC (Corrigida)", hover_data=['linha'], opacity=0.6
+            )
+            # Linha diagonal de referência
+            max_val = df_clean['vma'].max()
+            fig_scatter.add_shape(type="line", x0=0, y0=0, x1=max_val, y1=max_val, line=dict(color="gray", dash="dash"))
+            st.plotly_chart(fig_scatter, use_container_width=True)
+
+        with col_kpi:
+            st.markdown("#### Resumo Global")
+            eff_global = (df_clean['vmc'].sum() / df_clean['vma'].sum()) * 100
+            st.metric("Eficiência Média", f"{eff_global:.1f}%")
+            st.metric("Trechos Analisados", f"{len(df_clean)}")
+            st.caption("Apenas trechos consistentes.")
+
+        # --- RANKING INTERATIVO (Corredores) ---
+        st.subheader("Ranking de Corredores")
+
+        df_rank = df_clean.groupby('linha')[['vma', 'vmc']].mean().reset_index()
+        df_rank['eficiencia'] = (df_rank['vmc'] / df_rank['vma']) * 100
+
+        c1, c2 = st.columns([1, 2])
+        with c1:
+            qtd = st.number_input("Mostrar top:", 3, 20, 10)
+        with c2:
+            modo = st.radio("Ordenar por:", ["Piores (Gargalos)", "Melhores (Eficientes)"], horizontal=True)
+        
+        ASCENDING = True if "Piores" in modo else False
+        df_view = df_rank.sort_values('eficiencia', ascending=ASCENDING).head(qtd)
+
+        fig_bar = px.bar(
+            df_view, x='eficiencia', y='linha', orientation='h',
+            title=f"Top {qtd} Corredores - {modo}",
+            color='eficiencia', color_continuous_scale='RdYlGn', range_color=[0, 100],
+            text_auto='.1f'
+        )
+        fig_bar.update_layout(xaxis_range=[0, 100], yaxis={'categoryorder': 'total ascending'})
+        st.plotly_chart(fig_bar, use_container_width=True)
+
+    else:
+        st.warning("Sem dados suficientes de trechos físicos para calcular a correlação.")
