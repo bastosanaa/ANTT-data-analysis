@@ -7,7 +7,7 @@ class ExcelExtractor:
         self.excel_file = excel_file_path
         self.output_folder = output_folder
         self.csv_paths = {}
-        
+
         self.tabs_config = {
             'Pátios': {'filename': 'patios.csv', 'header': 0},
             'Terminais': {'filename': 'terminais.csv', 'header': [0, 1]},
@@ -49,9 +49,9 @@ class ExcelExtractor:
 
                 key_name = config['filename'].replace('.csv', '')
                 self.csv_paths[key_name] = output_path
-                
+
             except ValueError:
                 print(f"   [AVISO] Aba '{excel_tab}' não encontrada. Pulando.")
                 continue
-                
+
         return self.csv_paths
