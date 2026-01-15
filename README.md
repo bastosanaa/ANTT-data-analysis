@@ -7,7 +7,7 @@ Acesse o dashboard:
 
 Um dashboard para análise da infraestrutura ferroviária brasileira, desenvolvido como parte de um desafio técnico que avalia habilidades em ETL, modelagem de dados e desenvolvimento de painéis interativos.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
@@ -196,7 +196,7 @@ Access the dashboard
 
 A dashboard for analyzing Brazilian railway infrastructure, developed as part of a technical challenge that evaluates skills in ETL, data modeling, and interactive panel development.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
