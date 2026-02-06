@@ -103,14 +103,31 @@ antt-railway-dashboard/
 
 ### Pré-requisitos
 - Python 3.11
+- Java JDK (Obrigatório para o PySpark processar os dados)
 - pip (gerenciador de pacotes Python)
 
-### 1. Instale as Dependências
+### 1. Configuração do Ambiente (Windows)
+
+Antes de instalar as dependências, é recomendável criar um ambiente virtual isolado. No terminal (PowerShell), execute:
+
+```powershell
+# 1.1 Crie o ambiente virtual
+python -m venv venv
+
+# 1.2 Ative o ambiente
+.\venv\Scripts\activate
+
+# 1.3 Configure o JAVA_HOME (Essencial para o PySpark)
+# Nota: Verifique se o caminho abaixo corresponde à sua instalação do Java
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-17"
+```
+
+### 2. Instale as Dependências
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Execute o Pipeline ETL
+### 3. Execute o Pipeline ETL
 ```bash
 python ./db/etl.py
 ```
@@ -119,12 +136,12 @@ python ./db/etl.py
 > - Limpar e transformar os dados
 > - Criar o banco de dados SQLite em `db/data/antt.db`
 
-### 3. Execute o Dashboard
+### 4. Execute o Dashboard
 ```bash
 streamlit run app.py
 ```
 
-### 4. Acesse no Navegador
+### 5. Acesse no Navegador
 ```
 http://localhost:8501
 ```
@@ -292,14 +309,30 @@ antt-railway-dashboard/
 
 ### Prerequisites
 - Python 3.11
+- Java JDK (for PySpark)
 - pip (Python package manager)
 
-### 1. Install Dependencies
+### 1. Virtual Environment (Windows)
+
+```powershell
+# 1.1 Create venv
+python -m venv venv
+
+# 1.2 Activate environment
+.\venv\Scripts\activate
+
+# 1.3 Configure JAVA_HOME 
+# Note: Check the path of your own Java instalation
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-17"
+```
+
+
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run ETL Pipeline
+### 3. Run ETL Pipeline
 ```bash
 python ./db/etl.py
 ```
@@ -308,12 +341,12 @@ python ./db/etl.py
 > - Clean and transform the data
 > - Create SQLite database in `db/data/antt.db`
 
-### 3. Run Dashboard
+### 4. Run Dashboard
 ```bash
 streamlit run app.py
 ```
 
-### 4. Access in Browser
+### 5. Access in Browser
 ```
 http://localhost:8501
 ```
