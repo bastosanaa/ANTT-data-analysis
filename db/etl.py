@@ -1,12 +1,4 @@
-import sys
 import os
-
-# --- PATCH WINDOWS ---
-import socketserver
-try:
-    socketserver.UnixStreamServer
-except AttributeError:
-    socketserver.UnixStreamServer = socketserver.TCPServer
 
 from pyspark.sql import SparkSession
 
@@ -19,8 +11,6 @@ EXCEL_FILE = os.path.join(BASE_DIR, 'data', 'DR2025-MRS.xlsx')
 TEMP_DIR = os.path.join(BASE_DIR, 'data', 'temp')
 DB_PATH = os.path.join(BASE_DIR, 'data', 'antt.db')
 
-os.environ['HADOOP_HOME'] = "C:\\hadoop"
-sys.path.append("C:\\hadoop\\bin")
 
 def start_spark():
     return SparkSession.builder \

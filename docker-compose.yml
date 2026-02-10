@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  antt-dashboard:
+    # Constrói a imagem usando o Dockerfile na pasta atual
+    build: . 
+    container_name: antt_app
+    # Mapeia a porta 8501 do container para a 8501 do computador
+    ports:
+      - "8501:8501"
+    # (Opcional) Volume: Permite editar o código e ver a mudança sem recriar a imagem
+    volumes:
+      - .:/app
+    # Variável para o Spark não reclamar de memória
+    environment:
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=python3
